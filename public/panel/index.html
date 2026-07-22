@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel - Kelola Link</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="panel.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginScreen" class="login-screen">
+  <div class="login-card">
+    <h1><i class="fa-solid fa-link"></i> Masuk Panel</h1>
+    <p class="muted">Masukkan password admin untuk mengelola halaman.</p>
+    <input type="password" id="passwordInput" placeholder="Password" autocomplete="current-password">
+    <button id="loginBtn" class="btn-primary">Masuk</button>
+    <p id="loginError" class="error"></p>
+  </div>
+</div>
+
+<!-- PANEL -->
+<div id="panelScreen" class="panel-wrap" style="display:none">
+  <header class="panel-header">
+    <h1><i class="fa-solid fa-sliders"></i> Kelola Halaman</h1>
+    <div class="header-actions">
+      <span id="saveStatus" class="save-status"></span>
+      <button id="saveBtn" class="btn-primary"><i class="fa-solid fa-floppy-disk"></i> Simpan</button>
+      <button id="logoutBtn" class="btn-ghost"><i class="fa-solid fa-right-from-bracket"></i></button>
+    </div>
+  </header>
+
+  <div class="panel-body">
+    <div class="panel-form">
+
+      <nav class="tabs" id="tabs">
+        <button class="tab active" data-tab="profile">Profil</button>
+        <button class="tab" data-tab="theme">Tampilan</button>
+        <button class="tab" data-tab="socials">Sosial Media</button>
+        <button class="tab" data-tab="whatsapp">WhatsApp</button>
+        <button class="tab" data-tab="links">Tombol Link</button>
+      </nav>
+
+      <!-- PROFILE TAB -->
+      <section class="tab-panel active" data-panel="profile">
+        <label>Foto Profil</label>
+        <div class="row">
+          <img id="avatarPreview" class="avatar-preview" src="">
+          <input type="file" id="avatarFile" accept="image/*">
+        </div>
+        <label>Nama / Username</label>
+        <input type="text" id="p_name" placeholder="@namamu">
+        <label class="checkbox-label"><input type="checkbox" id="p_verified"> Centang biru (verified)</label>
+        <label>Bio / Deskripsi</label>
+        <input type="text" id="p_bio" placeholder="Deskripsi singkat">
+      </section>
+
+      <!-- THEME TAB -->
+      <section class="tab-panel" data-panel="theme">
+
+        <label>⚡ Preset Warna Cepat (opsional)</label>
+        <p class="hint">Tap salah satu buat langsung ganti seluruh skema warna. Semua tetap bisa diatur manual di bawah.</p>
+        <div class="swatch-grid" id="presetSwatches"></div>
+
+        <details class="group" open>
+          <summary>🖼️ Background</summary>
+          <label>Jenis Background</label>
+          <select id="t_bgType">
+            <option value="color">Warna Polos</option>
+            <option value="gradient">Gradasi</option>
+            <option value="image">Gambar</option>
+          </select>
+
+          <div id="bgColorFields">
+            <label>Warna Background</label>
+            <input type="color" id="t_bgColor">
+          </div>
+          <div id="bgGradientFields">
+            <label>Gradasi Dari</label>
+            <input type="color" id="t_gradFrom">
+            <label>Gradasi Ke</label>
+            <input type="color" id="t_gradTo">
+            <label>Sudut Gradasi (<span id="gradAngleVal"></span>°)</label>
+            <input type="range" id="t_gradAngle" min="0" max="360">
+          </div>
+          <div id="bgImageFields">
+            <label>Upload Gambar Background (dari HP)</label>
+            <input type="file" id="t_bgImageFile" accept="image/*">
+            <p class="hint">Disarankan &lt; 800KB agar loading cepat.</p>
+          </div>
+        </details>
+
+        <details class="group">
+          <summary>🔤 Teks & Layout</summary>
+          <label>Warna Teks Utama</label>
+          <input type="color" id="t_textColor">
+          <label>Warna Teks Sekunder (bio)</label>
+          <input type="color" id="t_subColorPicker">
+          <label>Perataan Layout</label>
+          <select id="t_align">
+            <option value="top">Mulai dari Atas</option>
+            <option value="center">Rata Tengah (Vertikal)</option>
+          </select>
+          <label>Font</label>
+          <select id="t_font">
+            <option value="'Segoe UI', system-ui, -apple-system, sans-serif">Default (Segoe UI)</option>
+            <option value="'Poppins', sans-serif">Poppins</option>
+            <option value="'Georgia', serif">Georgia (Serif)</option>
+            <option value="'Courier New', monospace">Courier (Monospace)</option>
+          </select>
+        </details>
+
+        <details class="group">
+          <summary>🔘 Tombol Link (Default)</summary>
+          <p class="hint">Ini warna default semua tombol. Tiap tombol di tab "Tombol Link" bisa override sendiri-sendiri.</p>
+          <label>Warna Tombol</label>
+          <input type="color" id="t_btnColor">
+          <label>Warna Teks Tombol</label>
+          <input type="color" id="t_btnTextColor">
+          <label>Bentuk Tombol</label>
+          <select id="t_btnShape">
+            <option value="square">Kotak</option>
+            <option value="rounded">Rounded</option>
+            <option value="pill">Bulat Penuh (Pill)</option>
+          </select>
+          <label>Warna Shadow Tombol</label>
+          <input type="color" id="t_shadowColor">
+          <label>Opacity Shadow (<span id="shadowOpacityVal"></span>)</label>
+          <input type="range" id="t_shadowOpacity" min="0" max="1" step="0.05">
+          <label>Blur Shadow (<span id="shadowBlurVal"></span>px)</label>
+          <input type="range" id="t_shadowBlur" min="0" max="40">
+        </details>
+      </section>
+
+      <!-- SOCIALS TAB -->
+      <section class="tab-panel" data-panel="socials">
+        <p class="hint">Pilih platform, lalu isi kolom "Link Tujuan" dengan URL manapun (Instagram, TikTok, WA, link custom, dll). Bisa juga upload ikon sendiri dari HP.</p>
+        <div id="socialsList"></div>
+        <button class="btn-add" id="addSocialBtn"><i class="fa-solid fa-plus"></i> Tambah Sosial Media</button>
+      </section>
+
+      <!-- WHATSAPP TAB -->
+      <section class="tab-panel" data-panel="whatsapp">
+        <label class="checkbox-label"><input type="checkbox" id="w_enabled"> Aktifkan Tombol WhatsApp</label>
+        <label>Nomor WhatsApp (format: 62812xxxxxxx)</label>
+        <input type="text" id="w_number" placeholder="628123456789">
+        <label>Pesan Otomatis</label>
+        <input type="text" id="w_message" placeholder="Halo, saya mau tanya...">
+        <label class="checkbox-label"><input type="checkbox" id="w_floating"> Tampilkan sebagai tombol melayang (floating)</label>
+      </section>
+
+      <!-- LINKS TAB -->
+      <section class="tab-panel" data-panel="links">
+        <p class="hint">Bisa bikin "Kategori" (tombol yang kalau ditekan buka daftar link di dalamnya) dan taruh di mana saja urutannya, dicampur sama tombol link biasa.</p>
+        <div id="linksList"></div>
+        <div class="add-link-actions">
+          <button class="btn-add" id="addLinkBtn"><i class="fa-solid fa-plus"></i> Tambah Tombol Link</button>
+          <button class="btn-add btn-add-category" id="addCategoryBtn"><i class="fa-solid fa-folder-plus"></i> Tambah Kategori</button>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="panel-preview">
+      <div class="preview-frame-wrap">
+        <iframe id="previewFrame" src="/"></iframe>
+      </div>
+      <button id="refreshPreviewBtn" class="btn-ghost small"><i class="fa-solid fa-rotate"></i> Refresh Preview</button>
+    </div>
+  </div>
+</div>
+
+<template id="socialItemTpl">
+  <div class="item-card social-item">
+    <div class="field-block">
+      <label class="mini-label">Platform / Ikon</label>
+      <select class="s_platform">
+        <option value="fa-brands fa-instagram">Instagram</option>
+        <option value="fa-brands fa-tiktok">TikTok</option>
+        <option value="fa-brands fa-whatsapp">WhatsApp</option>
+        <option value="fa-brands fa-facebook">Facebook</option>
+        <option value="fa-brands fa-x-twitter">X / Twitter</option>
+        <option value="fa-brands fa-youtube">YouTube</option>
+        <option value="fa-brands fa-telegram">Telegram</option>
+        <option value="fa-brands fa-linkedin">LinkedIn</option>
+        <option value="fa-brands fa-github">GitHub</option>
+        <option value="fa-brands fa-pinterest">Pinterest</option>
+        <option value="fa-brands fa-threads">Threads</option>
+        <option value="fa-solid fa-envelope">Email</option>
+        <option value="fa-solid fa-globe">Website</option>
+        <option value="__custom__">✨ Kustom (upload ikon dari HP)</option>
+      </select>
+    </div>
+    <div class="field-block s_customIconWrap" style="display:none">
+      <label class="mini-label">Upload Ikon Kustom</label>
+      <input type="file" class="s_customIconFile" accept="image/*">
+      <img class="s_customIconPreview" style="display:none">
+    </div>
+    <div class="field-block">
+      <label class="mini-label">Link Tujuan (wajib diisi, bisa link apapun)</label>
+      <input type="text" class="s_url" placeholder="https://instagram.com/namamu">
+    </div>
+    <div class="field-block">
+      <label class="mini-label">Warna Latar Ikon (opsional)</label>
+      <div class="row-inline">
+        <input type="color" class="s_bgColor">
+        <button type="button" class="btn-ghost small s_bgReset">Reset</button>
+      </div>
+    </div>
+    <button class="btn-remove"><i class="fa-solid fa-trash"></i> Hapus Item Ini</button>
+  </div>
+</template>
+
+<template id="linkItemTpl">
+  <div class="item-card link-item">
+    <div class="link-item-row">
+      <input type="text" class="l_title" placeholder="Judul Tombol (mis. PROMO)">
+      <label class="checkbox-label small"><input type="checkbox" class="l_enabled" checked> Aktif</label>
+    </div>
+    <label class="mini-label">Link Tujuan</label>
+    <input type="text" class="l_url" placeholder="https://...">
+
+    <label class="mini-label">Jenis Ikon</label>
+    <select class="l_iconType">
+      <option value="preset">Pilih dari daftar ikon</option>
+      <option value="upload">Upload gambar sendiri (dari HP)</option>
+      <option value="none">Tanpa ikon</option>
+    </select>
+
+    <div class="l_iconPresetWrap">
+      <select class="l_icon">
+        <option value="fa-solid fa-tag">Tag / Promo</option>
+        <option value="fa-solid fa-list">Menu</option>
+        <option value="fa-solid fa-download">Download</option>
+        <option value="fa-solid fa-users">Komunitas</option>
+        <option value="fa-solid fa-headset">Customer Care</option>
+        <option value="fa-solid fa-bag-shopping">Belanja</option>
+        <option value="fa-solid fa-utensils">Makanan</option>
+        <option value="fa-solid fa-link">Link Umum</option>
+      </select>
+    </div>
+    <div class="l_iconUploadWrap" style="display:none">
+      <input type="file" class="l_iconFile" accept="image/*">
+      <img class="l_iconPreview" style="display:none">
+    </div>
+
+    <label class="checkbox-label small l_customColorLabel"><input type="checkbox" class="l_customColor"> Kustom warna tombol ini (beda dari default)</label>
+    <div class="l_colorFields" style="display:none">
+      <label class="mini-label">Warna Latar Tombol</label>
+      <input type="color" class="l_bgColor">
+      <label class="mini-label">Warna Teks Tombol</label>
+      <input type="color" class="l_textColor">
+      <label class="mini-label">Warna Latar Ikon</label>
+      <input type="color" class="l_iconBgColor">
+      <label class="mini-label">Warna Shadow</label>
+      <input type="color" class="l_shadowColor">
+      <label class="mini-label">Opacity Shadow (<span class="l_shadowOpacityVal"></span>)</label>
+      <input type="range" class="l_shadowOpacity" min="0" max="1" step="0.05">
+      <label class="mini-label">Blur Shadow (<span class="l_shadowBlurVal"></span>px)</label>
+      <input type="range" class="l_shadowBlur" min="0" max="40">
+    </div>
+
+    <div class="link-item-actions">
+      <button class="btn-ghost small l_up"><i class="fa-solid fa-arrow-up"></i></button>
+      <button class="btn-ghost small l_down"><i class="fa-solid fa-arrow-down"></i></button>
+      <button class="btn-remove l_remove"><i class="fa-solid fa-trash"></i> Hapus</button>
+    </div>
+  </div>
+</template>
+
+<template id="categoryItemTpl">
+  <div class="item-card category-item">
+    <div class="link-item-row">
+      <input type="text" class="c_title" placeholder="Nama Kategori (mis. PROMO BULAN INI)">
+      <label class="checkbox-label small"><input type="checkbox" class="c_enabled" checked> Aktif</label>
+    </div>
+    <label class="mini-label">Ikon Kategori (opsional)</label>
+    <select class="c_icon">
+      <option value="">Tanpa ikon</option>
+      <option value="fa-solid fa-folder">Folder</option>
+      <option value="fa-solid fa-tag">Tag / Promo</option>
+      <option value="fa-solid fa-list">Menu</option>
+      <option value="fa-solid fa-bag-shopping">Belanja</option>
+      <option value="fa-solid fa-star">Bintang</option>
+    </select>
+
+    <label class="checkbox-label small"><input type="checkbox" class="c_customColor"> Kustom warna tombol kategori</label>
+    <div class="c_colorFields" style="display:none">
+      <label class="mini-label">Warna Latar</label>
+      <input type="color" class="c_bgColor">
+      <label class="mini-label">Warna Teks</label>
+      <input type="color" class="c_textColor">
+    </div>
+
+    <label class="mini-label">Isi Kategori (link di dalamnya)</label>
+    <div class="category-children"></div>
+    <button type="button" class="btn-add small c_addChild">+ Tambah Link di Kategori Ini</button>
+
+    <div class="link-item-actions">
+      <button class="btn-ghost small c_up"><i class="fa-solid fa-arrow-up"></i></button>
+      <button class="btn-ghost small c_down"><i class="fa-solid fa-arrow-down"></i></button>
+      <button class="btn-remove c_remove"><i class="fa-solid fa-trash"></i> Hapus Kategori</button>
+    </div>
+  </div>
+</template>
+
+<script src="panel.js"></script>
+</body>
+</html>
