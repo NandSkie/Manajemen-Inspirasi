@@ -6,12 +6,12 @@
     "verified": false
   },
   "theme": {
-    "backgroundType": "gradient",
+    "backgroundType": "image",
     "backgroundColor": "#14b8a6",
     "gradientFrom": "#00d5ff",
     "gradientTo": "#0284c7",
     "gradientAngle": 135,
-    "backgroundImage": "",
+    "backgroundImage": "https://cdn.jsdelivr.net/gh/NandSkie/Manajemen-Inspirasi@main/public/uploads/background-1786249794909.png",
     "textColor": "#ffffff",
     "subTextColor": "#ffffff",
     "buttonColor": "#22c55e",
