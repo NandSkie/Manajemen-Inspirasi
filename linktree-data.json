@@ -51,18 +51,24 @@
   },
   "links": [
     {
-      "type": "link",
-      "title": "Dokumentasi ",
-      "url": "",
-      "icon": "fa-solid fa-list",
-      "iconImage": "",
+      "type": "category",
+      "title": "Laskar Manajemen",
+      "icon": "fa-solid fa-folder",
       "enabled": true,
       "order": 0,
-      "customColor": false
+      "customColor": false,
+      "children": [
+        {
+          "title": "Dokumentasi ",
+          "url": "",
+          "icon": "fa-solid fa-link",
+          "enabled": true
+        }
+      ]
     },
     {
       "type": "category",
-      "title": "Kategori Baru",
+      "title": "",
       "icon": "fa-solid fa-folder",
       "enabled": true,
       "order": 1,
