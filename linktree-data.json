@@ -1,0 +1,34 @@
+{
+  "profile": {
+    "avatar": "",
+    "name": "Hi",
+    "bio": "Deskripsi singkat kamu",
+    "verified": true
+  },
+  "theme": {
+    "backgroundType": "gradient",
+    "backgroundColor": "#14b8a6",
+    "gradientFrom": "#2dd4bf",
+    "gradientTo": "#0284c7",
+    "gradientAngle": 135,
+    "backgroundImage": "",
+    "textColor": "#ffffff",
+    "subTextColor": "#ffffff",
+    "buttonColor": "#22c55e",
+    "buttonTextColor": "#ffffff",
+    "buttonShape": "rounded",
+    "shadowColor": "#000000",
+    "shadowOpacity": 0.25,
+    "shadowBlur": 14,
+    "layoutAlign": "top",
+    "fontFamily": "'Segoe UI', system-ui, -apple-system, sans-serif"
+  },
+  "socials": [],
+  "whatsapp": {
+    "enabled": false,
+    "number": "",
+    "message": "",
+    "floating": true
+  },
+  "links": []
+}
