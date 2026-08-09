@@ -1,14 +1,14 @@
 {
   "profile": {
     "avatar": "",
-    "name": "Laskar Manajemen Inspirasi ",
-    "bio": "Laskar mengajar Manajemen Inspirasi adalah....",
+    "name": "Laskar Inspirasi",
+    "bio": "Laskar Mengajar Inspirasi adalah program sosial-edukasi yang diselenggarakan oleh Manajemen Inspirasi untuk berbagi ilmu, kepedulian, dan inspirasi.",
     "verified": false
   },
   "theme": {
     "backgroundType": "gradient",
     "backgroundColor": "#14b8a6",
-    "gradientFrom": "#2dd4bf",
+    "gradientFrom": "#00d5ff",
     "gradientTo": "#0284c7",
     "gradientAngle": 135,
     "backgroundImage": "",
@@ -59,13 +59,13 @@
       "customColor": true,
       "children": [
         {
-          "title": "Dokumentasi ",
+          "title": "",
           "url": "",
           "icon": "fa-solid fa-link",
           "enabled": true
         }
       ],
-      "bgColor": "#ffd35c"
+      "bgColor": "#2590f4"
     },
     {
       "type": "category",
@@ -93,7 +93,9 @@
       "iconImage": "",
       "enabled": true,
       "order": 3,
-      "customColor": false
+      "customColor": true,
+      "bgColor": "#eeff00",
+      "shadowOpacity": 0.25
     }
   ]
 }
