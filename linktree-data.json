@@ -56,7 +56,7 @@
       "icon": "fa-solid fa-folder",
       "enabled": true,
       "order": 0,
-      "customColor": false,
+      "customColor": true,
       "children": [
         {
           "title": "Dokumentasi ",
@@ -64,7 +64,8 @@
           "icon": "fa-solid fa-link",
           "enabled": true
         }
-      ]
+      ],
+      "bgColor": "#ffd35c"
     },
     {
       "type": "category",
