@@ -53,7 +53,7 @@
     {
       "type": "category",
       "title": " Event Guide ✨",
-      "icon": "fa-solid fa-folder",
+      "icon": "fa-solid fa-list",
       "enabled": true,
       "order": 0,
       "customColor": false,
@@ -70,7 +70,7 @@
     {
       "type": "category",
       "title": "Volunteer Hub",
-      "icon": "fa-solid fa-folder",
+      "icon": "fa-solid fa-list",
       "enabled": true,
       "order": 1,
       "customColor": false,
