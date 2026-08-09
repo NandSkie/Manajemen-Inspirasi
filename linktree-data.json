@@ -14,11 +14,11 @@
     "backgroundImage": "https://cdn.jsdelivr.net/gh/NandSkie/Manajemen-Inspirasi@main/public/uploads/background-1786249794909.png",
     "textColor": "#1e3a8a",
     "subTextColor": "#94a3b8",
-    "buttonColor": "#22c55e",
+    "buttonColor": "#eaf2ff",
     "buttonTextColor": "#001775",
     "buttonShape": "pill",
     "shadowColor": "#000000",
-    "shadowOpacity": 0.1,
+    "shadowOpacity": 0.25,
     "shadowBlur": 14,
     "layoutAlign": "top",
     "fontFamily": "'Georgia', serif"
