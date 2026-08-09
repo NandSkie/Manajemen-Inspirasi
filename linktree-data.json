@@ -18,7 +18,7 @@
     "buttonTextColor": "#001775",
     "buttonShape": "pill",
     "shadowColor": "#000000",
-    "shadowOpacity": 0.25,
+    "shadowOpacity": 0.1,
     "shadowBlur": 14,
     "layoutAlign": "top",
     "fontFamily": "'Georgia', serif"
