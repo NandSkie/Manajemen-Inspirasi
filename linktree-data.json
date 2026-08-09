@@ -62,18 +62,34 @@
     },
     {
       "type": "category",
-      "title": "Memories & Certificate",
-      "icon": "fa-solid fa-list",
+      "title": "Volunteer Hub",
+      "icon": "fa-solid fa-folder",
       "enabled": true,
       "order": 1,
       "customColor": false,
       "children": [
         {
-          "title": "Materi ",
+          "title": "Location",
           "url": "",
-          "icon": "fa-solid fa-download",
+          "icon": "fa-solid fa-link",
           "enabled": true
         },
+        {
+          "title": "resentation Slides",
+          "url": "",
+          "icon": "fa-solid fa-link",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "title": "Memories & Certificate",
+      "icon": "fa-solid fa-list",
+      "enabled": true,
+      "order": 2,
+      "customColor": false,
+      "children": [
         {
           "title": "Gallery Pictures",
           "url": "",
@@ -90,12 +106,12 @@
     },
     {
       "type": "link",
-      "title": "Pesan & Kritik - Laskar Mengajar Inspirasi 2026",
+      "title": "Message & Feedback - Laskar Mengajar Inspirasi 2026",
       "url": "",
       "icon": "fa-solid fa-headset",
       "iconImage": "",
       "enabled": true,
-      "order": 2,
+      "order": 3,
       "customColor": true,
       "bgColor": "#ffd60a",
       "shadowOpacity": 0.25
