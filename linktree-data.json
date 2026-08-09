@@ -63,7 +63,7 @@
     {
       "type": "category",
       "title": "Memories & Certificate",
-      "icon": "fa-solid fa-folder",
+      "icon": "fa-solid fa-list",
       "enabled": true,
       "order": 1,
       "customColor": false,
@@ -77,7 +77,7 @@
         {
           "title": "Gallery Pictures",
           "url": "",
-          "icon": "fa-solid fa-link",
+          "icon": "fa-solid fa-download",
           "enabled": true
         },
         {
