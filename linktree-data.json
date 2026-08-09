@@ -12,16 +12,16 @@
     "gradientTo": "#0284c7",
     "gradientAngle": 135,
     "backgroundImage": "https://cdn.jsdelivr.net/gh/NandSkie/Manajemen-Inspirasi@main/public/uploads/background-1786249794909.png",
-    "textColor": "#ffffff",
-    "subTextColor": "#ffffff",
+    "textColor": "#1e3a8a",
+    "subTextColor": "#94a3b8",
     "buttonColor": "#22c55e",
-    "buttonTextColor": "#ffffff",
+    "buttonTextColor": "#001775",
     "buttonShape": "rounded",
     "shadowColor": "#000000",
     "shadowOpacity": 0.25,
     "shadowBlur": 14,
     "layoutAlign": "top",
-    "fontFamily": "'Segoe UI', system-ui, -apple-system, sans-serif"
+    "fontFamily": "'Poppins', sans-serif"
   },
   "socials": [
     {
