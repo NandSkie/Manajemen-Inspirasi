@@ -52,14 +52,14 @@
   "links": [
     {
       "type": "category",
-      "title": " Event Guide ✨",
-      "icon": "fa-solid fa-list",
+      "title": "Manajemen Inspirasi",
+      "icon": "fa-solid fa-tag",
       "enabled": true,
       "order": 0,
       "customColor": false,
       "children": [
         {
-          "title": "",
+          "title": "About Us",
           "url": "",
           "icon": "fa-solid fa-link",
           "enabled": true
@@ -69,21 +69,25 @@
     },
     {
       "type": "category",
-      "title": "Volunteer Hub",
-      "icon": "fa-solid fa-list",
-      "enabled": true,
-      "order": 1,
-      "customColor": false,
-      "children": []
-    },
-    {
-      "type": "category",
       "title": "Memories & Certificate",
       "icon": "fa-solid fa-folder",
       "enabled": true,
-      "order": 2,
+      "order": 1,
       "customColor": false,
-      "children": []
+      "children": [
+        {
+          "title": "Gallery Pictures",
+          "url": "",
+          "icon": "fa-solid fa-link",
+          "enabled": true
+        },
+        {
+          "title": "Sertificate",
+          "url": "",
+          "icon": "fa-solid fa-link",
+          "enabled": true
+        }
+      ]
     },
     {
       "type": "link",
@@ -92,7 +96,7 @@
       "icon": "fa-solid fa-headset",
       "iconImage": "",
       "enabled": true,
-      "order": 3,
+      "order": 2,
       "customColor": true,
       "bgColor": "#ffd60a",
       "shadowOpacity": 0.25
