@@ -53,7 +53,7 @@
     {
       "type": "category",
       "title": "Manajemen Inspirasi",
-      "icon": "fa-solid fa-tag",
+      "icon": "fa-solid fa-folder",
       "enabled": true,
       "order": 0,
       "customColor": false,
@@ -61,7 +61,7 @@
         {
           "title": "About Us",
           "url": "",
-          "icon": "fa-solid fa-link",
+          "icon": "fa-solid fa-users",
           "enabled": true
         }
       ],
