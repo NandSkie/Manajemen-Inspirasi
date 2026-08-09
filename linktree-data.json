@@ -20,7 +20,7 @@
     "shadowColor": "#000000",
     "shadowOpacity": 0.25,
     "shadowBlur": 14,
-    "layoutAlign": "top",
+    "layoutAlign": "center",
     "fontFamily": "'Georgia', serif"
   },
   "socials": [
