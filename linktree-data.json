@@ -52,7 +52,7 @@
   "links": [
     {
       "type": "category",
-      "title": "Laskar Manajemen",
+      "title": " Event Guide ✨",
       "icon": "fa-solid fa-folder",
       "enabled": true,
       "order": 0,
@@ -68,12 +68,31 @@
     },
     {
       "type": "category",
-      "title": "",
+      "title": "Volunteer Hub",
       "icon": "fa-solid fa-folder",
       "enabled": true,
       "order": 1,
       "customColor": false,
       "children": []
+    },
+    {
+      "type": "category",
+      "title": "Memories & Certificate",
+      "icon": "fa-solid fa-folder",
+      "enabled": true,
+      "order": 2,
+      "customColor": false,
+      "children": []
+    },
+    {
+      "type": "link",
+      "title": "Pesan & Kritik - Laskar Mengajar Inspirasi 2026",
+      "url": "",
+      "icon": "fa-solid fa-link",
+      "iconImage": "",
+      "enabled": true,
+      "order": 3,
+      "customColor": false
     }
   ]
 }
