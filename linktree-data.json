@@ -16,7 +16,7 @@
     "subTextColor": "#94a3b8",
     "buttonColor": "#22c55e",
     "buttonTextColor": "#001775",
-    "buttonShape": "rounded",
+    "buttonShape": "pill",
     "shadowColor": "#000000",
     "shadowOpacity": 0.25,
     "shadowBlur": 14,
