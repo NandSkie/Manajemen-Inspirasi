@@ -51,21 +51,14 @@
   },
   "links": [
     {
-      "type": "category",
-      "title": "Manajemen Inspirasi",
-      "icon": "fa-solid fa-folder",
+      "type": "link",
+      "title": "About Us",
+      "url": "",
+      "icon": "fa-solid fa-users",
+      "iconImage": "",
       "enabled": true,
       "order": 0,
-      "customColor": false,
-      "children": [
-        {
-          "title": "About Us",
-          "url": "",
-          "icon": "fa-solid fa-users",
-          "enabled": true
-        }
-      ],
-      "bgColor": "#2590f4"
+      "customColor": false
     },
     {
       "type": "category",
@@ -76,6 +69,12 @@
       "customColor": false,
       "children": [
         {
+          "title": "Materi ",
+          "url": "",
+          "icon": "fa-solid fa-download",
+          "enabled": true
+        },
+        {
           "title": "Gallery Pictures",
           "url": "",
           "icon": "fa-solid fa-link",
@@ -84,7 +83,7 @@
         {
           "title": "Sertificate",
           "url": "",
-          "icon": "fa-solid fa-link",
+          "icon": "fa-solid fa-download",
           "enabled": true
         }
       ]
