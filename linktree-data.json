@@ -70,14 +70,14 @@
       "children": [
         {
           "title": "Location",
-          "url": "",
+          "url": "https://maps.app.goo.gl/eLGemSvCUuhZphjG6",
           "icon": "fa-solid fa-link",
           "enabled": true
         },
         {
           "title": "Presentation Slides",
-          "url": "",
-          "icon": "fa-solid fa-link",
+          "url": "https://drive.google.com/drive/folders/1pT7UQDV-snEvc_A28h1CvLuqT1tQ0CvQ?usp=drive_link",
+          "icon": "fa-solid fa-list",
           "enabled": true
         }
       ]
@@ -86,7 +86,7 @@
       "type": "category",
       "title": "Memories & Certificate",
       "icon": "fa-solid fa-list",
-      "enabled": true,
+      "enabled": false,
       "order": 2,
       "customColor": false,
       "children": [
@@ -100,7 +100,7 @@
           "title": "Sertificate",
           "url": "",
           "icon": "fa-solid fa-download",
-          "enabled": true
+          "enabled": false
         }
       ]
     },
