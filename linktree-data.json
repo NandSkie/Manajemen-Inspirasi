@@ -110,7 +110,7 @@
       "url": "",
       "icon": "fa-solid fa-headset",
       "iconImage": "",
-      "enabled": true,
+      "enabled": false,
       "order": 3,
       "customColor": true,
       "bgColor": "#ffd60a",
