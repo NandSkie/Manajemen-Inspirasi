@@ -69,6 +69,12 @@
       "customColor": false,
       "children": [
         {
+          "title": "Absensi Volunteer",
+          "url": "",
+          "icon": "fa-solid fa-link",
+          "enabled": false
+        },
+        {
           "title": "Location",
           "url": "https://maps.app.goo.gl/eLGemSvCUuhZphjG6",
           "icon": "fa-solid fa-link",
@@ -92,7 +98,7 @@
       "children": [
         {
           "title": "Gallery Pictures",
-          "url": "",
+          "url": "https://drive.google.com/drive/folders/1dNUNSD6xSzSGhUzPnHOIMTW5rWll4gfM?usp=drive_link",
           "icon": "fa-solid fa-download",
           "enabled": false
         },
@@ -113,7 +119,7 @@
     {
       "type": "link",
       "title": "Message & Feedback - Laskar Mengajar Inspirasi 2026",
-      "url": "",
+      "url": "https://forms.gle/cfj1DyydQWQnDr469",
       "icon": "fa-solid fa-headset",
       "iconImage": "",
       "enabled": false,
