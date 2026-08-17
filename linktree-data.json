@@ -86,7 +86,7 @@
       "type": "category",
       "title": "Memories & Certificate",
       "icon": "fa-solid fa-list",
-      "enabled": false,
+      "enabled": true,
       "order": 2,
       "customColor": false,
       "children": [
@@ -94,13 +94,19 @@
           "title": "Gallery Pictures",
           "url": "",
           "icon": "fa-solid fa-download",
-          "enabled": true
+          "enabled": false
         },
         {
           "title": "Sertificate",
           "url": "",
           "icon": "fa-solid fa-download",
           "enabled": false
+        },
+        {
+          "title": "Technical Meeting (TM) ",
+          "url": "https://drive.google.com/drive/folders/1GVqmj9DcYZS7HKurixPslAkbbjyduvfr",
+          "icon": "fa-solid fa-link",
+          "enabled": true
         }
       ]
     },
