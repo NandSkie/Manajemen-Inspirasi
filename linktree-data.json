@@ -85,6 +85,12 @@
           "url": "https://drive.google.com/drive/folders/1pT7UQDV-snEvc_A28h1CvLuqT1tQ0CvQ?usp=drive_link",
           "icon": "fa-solid fa-list",
           "enabled": true
+        },
+        {
+          "title": "Twibon",
+          "url": "",
+          "icon": "fa-solid fa-link",
+          "enabled": false
         }
       ]
     },
