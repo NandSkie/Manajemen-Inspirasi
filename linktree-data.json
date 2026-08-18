@@ -87,10 +87,10 @@
           "enabled": true
         },
         {
-          "title": "Twibon",
+          "title": "Twibon ( 19 - 22 Agustus)",
           "url": "",
           "icon": "fa-solid fa-link",
-          "enabled": false
+          "enabled": true
         }
       ]
     },
