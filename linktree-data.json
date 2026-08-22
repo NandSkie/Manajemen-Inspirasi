@@ -104,9 +104,9 @@
       "children": [
         {
           "title": "Gallery Pictures",
-          "url": "https://drive.google.com/drive/folders/1dNUNSD6xSzSGhUzPnHOIMTW5rWll4gfM?usp=drive_link",
+          "url": "https://drive.google.com/drive/folders/1dNUNSD6xSzSGhUzPnHOIMTW5rWll4gfM",
           "icon": "fa-solid fa-download",
-          "enabled": false
+          "enabled": true
         },
         {
           "title": "Sertificate",
